@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+.nav-link {
+  @apply text-gray-700 dark:text-gray-200 hover:text-brown-600 dark:hover:text-yellow-400 transition-colors;
+}
+
+.icon-link {
+  @apply text-xl text-gray-700 dark:text-gray-200 hover:text-brown-600 dark:hover:text-yellow-400 transition-all;
+}
+
+.mobile-link {
+  @apply block py-2 text-gray-700 dark:text-gray-200 hover:text-brown-600 dark:hover:text-yellow-400;
+}
