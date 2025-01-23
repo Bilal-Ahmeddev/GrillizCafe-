@@ -8,7 +8,6 @@
     "start": "nodemon Grillizbackend/src/server.js",
     "dev": "nodemon Grillizbackend/src/server.js"
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
