@@ -6,6 +6,7 @@ const productRoutes = require("./routes/productRoutes");
 const userRoutes = require("./routes/userRoutes"); 
 const path = require('path');
 const _dirname=path.resolve();
+require("dotenv").config();
 
 
 dotenv.config();
