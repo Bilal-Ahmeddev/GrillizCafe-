@@ -13,15 +13,17 @@ const Login = () => {
     setError(""); // Clear any previous error
 
     try {
-      // Send login request to backend
-      const { data } = await axios.post("http://localhost:5000/api/users/login", { email, password });
+      // Send login request to backend (use /login instead of /register)
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/users/login`, { email, password });
+
+      // Assuming the response contains the JWT token
+      const { token } = response.data;
 
       // Store JWT token in localStorage
-      localStorage.setItem("token", data.token);
+      localStorage.setItem("token", token);
 
-      // Redirect user to home page after successful login
       alert("Login Successful!");
-      navigate("/home");
+      navigate("/home"); // Redirect to home or dashboard after successful login
     } catch (err) {
       // Show error message if login fails
       setError(err.response?.data?.message || "Invalid email or password");
